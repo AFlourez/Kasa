@@ -1,0 +1,98 @@
+/* FicheLogement.css */
+
+.photos-carousel {
+  position: relative;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.image-container {
+  position: relative;
+  max-width: 1240px;
+}
+
+.left-arrow,
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  max-width: 40px;
+  height: 60px;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.card-host {
+  margin-top: 20px;
+  max-width: 1240px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #FF6060;
+  font-size: 32px;
+}
+
+p.hostName {
+  color: #FF6060;
+}
+
+.hostPicture {
+  max-width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.hostName {
+  color: #FF6060;
+  margin-right: 10px;
+}
+
+.infoHote {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.host-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 25px;
+  background-color: #FF6060;
+  color: white;
+  font-size: 14px;
+}
+
+.description-equipments {
+  display: flex;
+  max-width: 1240px;
+  margin: 20px auto;
+  justify-content: space-between;
+}
+
+.collapseDescription,
+.collapseEquipements {
+  width: 48%; /* Assurez-vous que la somme des largeurs est inférieure ou égale à 100% pour éviter les débordements */
+}

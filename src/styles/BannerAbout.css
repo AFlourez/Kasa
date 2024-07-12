@@ -1,0 +1,15 @@
+.about-cover {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1240px;
+    height: 223px;
+    background-image: url('../assets/about_cover.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    margin: 0 auto; 
+    border-radius: 25px; 
+}

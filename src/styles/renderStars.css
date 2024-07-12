@@ -1,0 +1,11 @@
+.rating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .star {
+    max-width: 20px; /* Ajustez la taille des étoiles selon vos préférences */
+    height: 20px; /* Ajustez la taille des étoiles selon vos préférences */
+    margin-right: 5px; /* Espace entre les étoiles */
+  }
+  
