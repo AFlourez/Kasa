@@ -3,11 +3,10 @@ import React from 'react';
 import Header from '../components/Header';
 import BannerAbout from '../components/BannerAbout'; // Importez le nouveau composant de bannière About
 import Collapse from '../components/Collapse';
-import '../styles/About.css';
+import '../scss/About.css';
 import Footer from '../components/Footer';
 
-const About = () => {
-  return (
+const About = () => {  return (
     <div className="about">
       <Header />
       <BannerAbout />

@@ -1,0 +1,72 @@
+/*
+* Banner pour page principale + about
+*/
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.banner {
+  width: 100%;
+  margin: 0 auto;
+  @include flex-display($jc: center, $ai: center); // Utilisation du mixin flex-display pour centrer horizontalement et verticalement
+  max-width: 1240px; // Assurez-vous que cette règle est correctement appliquée dans votre structure CSS
+
+  .home-cover {
+    @extend .banner; // Utilisation de l'extension pour réutiliser les styles de .banner
+    position: relative;
+    background-image: url('../../assets/home_cover.png'); // Utilisation de Sass pour l'URL
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: $large-border-radius; // Utilisation de la variable définie dans _variables.scss
+    overflow: hidden;
+    width: 100%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.45); // Utilisation de Sass pour la couleur avec opacité
+    }
+
+    .home-cover-text {
+      position: relative;
+      font-size: 3rem;
+      font-weight: normal;
+    }
+  }
+
+  .about-cover {
+    @extend .banner; // Utilisation de l'extension pour réutiliser les styles de .banner
+    position: relative;
+    background-image: url('../../assets/about_cover.png'); // Utilisation de Sass pour l'URL
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: $large-border-radius; // Utilisation de la variable définie dans _variables.scss
+    overflow: hidden;
+    width: 100%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.45); // Utilisation de Sass pour la couleur avec opacité
+    }
+
+    .about-cover-text {
+      position: relative;
+      font-size: 3rem;
+      font-weight: normal;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/Collapse.css';
+import '../scss/Collapse.css';
 import arrowDown from '../assets/arrow_down.png';
 
 const Collapse = ({ title, children }) => {

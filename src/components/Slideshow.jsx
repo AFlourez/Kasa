@@ -1,9 +1,9 @@
-// Slideshow.js
+// Slideshow.jsx
 
 import React, { useState } from 'react';
 import leftArrowImage from '../assets/chevron_carousel_left.png';
 import rightArrowImage from '../assets/chevron_carousel_right.png';
-import '../styles/SlideShow.css';
+import '../scss/SlideShow.css';
 
 const Slideshow = ({ images }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -19,19 +19,32 @@ const Slideshow = ({ images }) => {
   return (
     <div className="slideshow">
       <div className="image-container">
-        {images.length > 0 && (
+        {images && images.length > 0 ? (
           <>
-            {/* Flèches pour naviguer */}
-            <img src={leftArrowImage} alt="Flèche gauche" className="arrow left-arrow" onClick={previousImage} />
+            {/* Flèche gauche pour naviguer */}
+            <img
+              src={leftArrowImage}
+              alt="Flèche gauche pour naviguer vers l'image précédente"
+              className="arrow left-arrow"
+              onClick={previousImage}
+            />
+            {/* Image du diaporama */}
             <img
               src={images[currentImageIndex]}
               alt={`Image ${currentImageIndex}`}
               className="gallery-image"
             />
-            <img src={rightArrowImage} alt="Flèche droite" className="arrow right-arrow" onClick={nextImage} />
+            {/* Flèche droite pour naviguer */}
+            <img
+              src={rightArrowImage}
+              alt="Flèche droite pour naviguer vers l'image suivante"
+              className="arrow right-arrow"
+              onClick={nextImage}
+            />
           </>
+        ) : (
+          <p>Aucune image disponible.</p>
         )}
-        {!images || images.length === 0 && <p>Aucune image disponible.</p>}
       </div>
     </div>
   );

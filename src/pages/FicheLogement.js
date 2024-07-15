@@ -6,7 +6,7 @@ import locations from '../data/data.js';
 import Slideshow from '../components/Slideshow';
 import renderStars from '../components/renderStars';
 import Collapse from '../components/Collapse';
-import '../styles/FicheLogement.css';
+import '../scss/FicheLogement.css';
 import Error404 from '../components/Error404';
 
 function FicheLogement() {

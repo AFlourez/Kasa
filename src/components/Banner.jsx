@@ -1,9 +1,9 @@
 import React from 'react';
-import '../styles/Banner.css';
+import '../scss/components/Banner.scss';
 
-function Banner({ showFilter = true, customClass = '' }) {
+function Banner() {
   return (
-    <div className={`home-cover-container ${showFilter ? 'with-filter' : ''} ${customClass}`}>
+    <div className="banner">
       <div className="home-cover">
         <h1 className="home-cover-text">Chez vous, partout et ailleurs</h1>
       </div>
@@ -12,4 +12,3 @@ function Banner({ showFilter = true, customClass = '' }) {
 }
 
 export default Banner;
-
