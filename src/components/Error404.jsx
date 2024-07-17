@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
-import "../scss/Error404.css"
+import "../scss/components/Error404.scss"
 
 const Error404 = () => {
   return (

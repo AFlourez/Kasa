@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import leftArrowImage from '../assets/chevron_carousel_left.png';
 import rightArrowImage from '../assets/chevron_carousel_right.png';
-import '../scss/SlideShow.css';
+import '../scss/components/Sideshow.scss';
 
 const Slideshow = ({ images }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -32,7 +32,7 @@ const Slideshow = ({ images }) => {
             <img
               src={images[currentImageIndex]}
               alt={`Image ${currentImageIndex}`}
-              className="gallery-image"
+              className="photo-caroussel"
             />
             {/* Flèche droite pour naviguer */}
             <img

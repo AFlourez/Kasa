@@ -1,0 +1,26 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.footer {
+  background-color: black;
+  color: $color-secondary;
+  text-align: center;
+  padding: 20px;
+  max-width: 100%;
+  height: $footer-height;
+  margin-top: 50px;
+
+  @include flex-display($di: column, $jc: center, $ai: center);
+}
+
+.footer-logo {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 10px; // Espace en bas du logo
+}
+
+.footer-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: $color-secondary;
+}

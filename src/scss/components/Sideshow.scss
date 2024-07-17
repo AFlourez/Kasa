@@ -1,4 +1,6 @@
-/* Slideshow.css */
+@import '../utils/mixins';
+@import '../utils/variables';
+
 
 .slideshow {
     max-width: 1240px;
@@ -31,9 +33,9 @@
     right: 10px;
   }
   
-  .gallery-image {
-    width: 100%;
-    max-height: 400px;
-    margin: 0 auto;
-  }
+  // .gallery-image {
+  //   width: 100%;
+  //   max-height: 400px;
+  //   margin: 0 auto;
+  // }
   

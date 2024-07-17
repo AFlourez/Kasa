@@ -3,7 +3,7 @@ import React from 'react';
 import Header from '../components/Header';
 import BannerAbout from '../components/BannerAbout'; // Importez le nouveau composant de bannière About
 import Collapse from '../components/Collapse';
-import '../scss/About.css';
+import '../scss/components/Banner.scss';
 import Footer from '../components/Footer';
 
 const About = () => {  return (

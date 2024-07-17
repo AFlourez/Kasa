@@ -1,0 +1,25 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.about-cover {
+    max-width: 1240px;
+    height: 223px;
+    background-image: url('../../assets/about_cover.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    margin: 0 auto; 
+    border-radius: 25px; 
+
+    @media screen and (max-width: 550px) {
+        margin: 20px auto;
+        height: 120px;
+    }
+
+}
+
+.collapses {
+    margin-top: 40px;
+  }
+  

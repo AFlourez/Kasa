@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
-import './scss/App.css';
+import './scss/main.scss';
 import Banner from './components/Banner';
 import Gallery from './components/Gallery';
 import Footer from './components/Footer';

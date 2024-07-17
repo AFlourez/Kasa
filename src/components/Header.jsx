@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png'; 
-import '../scss/Header.css'; 
+import '../scss/main.scss'; 
 
 function Header() {
   return (
@@ -11,8 +11,16 @@ function Header() {
       </div>
       <nav className="nav">
         <ul>
-          <li><Link to="/">Accueil</Link></li>
-          <li><Link to="/about">A propos</Link></li>
+          <li>
+            <NavLink exact to="/" activeClassName="active">
+              Accueil
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/about" activeClassName="active">
+              A propos
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>

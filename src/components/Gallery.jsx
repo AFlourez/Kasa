@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import locations from '../data/data.js';
-import '../scss/Gallery.css';
+import '../scss/components/Gallery.scss';
 
 
 

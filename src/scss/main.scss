@@ -1,8 +1,15 @@
-@import 'base/reset';
-@import 'base/typography';
-@import 'components/buttons';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'pages/home';
-@import '../scss/utils/mixins';
-@import 'utils/variables';
+@import './utils/variables';
+@import './utils/mixins';
+@import './base/base';
+
+@import "./components/Banner.scss";
+@import "./components/Collapse.scss";
+@import "./components/Footer.scss";
+@import "./components/Gallery.scss";
+@import "./components/Header.scss";
+@import "./components/renderStars.scss";
+@import "./components/Sideshow.scss";
+// @import './components/Error404.js';
+
+// @import "../pages/About";
+// @import "../pages/FicheLogement";
