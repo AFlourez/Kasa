@@ -10,11 +10,11 @@
   @include flex-display($jc: center, $ai: center); // Utilisation du mixin flex-display pour centrer horizontalement et verticalement
   max-width: 1240px; // Assurez-vous que cette règle est correctement appliquée dans votre structure CSS
   height: 223px;
+
   @media screen and (max-width: 550px) {
     margin: 20px auto;
     height: 120px;
-}
-
+  }
 
   .home-cover {
     @extend .banner; // Utilisation de l'extension pour réutiliser les styles de .banner
@@ -44,12 +44,10 @@
       font-weight: normal;
       color: white;
       padding: 20px;
-    }
 
-    @media screen and (max-width: 550px) {
-      margin: 20px auto;
-      height: 120px;
-      font-size: 24px;
-  }
+      @media screen and (max-width: 550px) {
+        font-size: 24px;
+      }
+    }
   }
 }

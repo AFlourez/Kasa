@@ -21,26 +21,30 @@ const Slideshow = ({ images }) => {
       <div className="image-container">
         {images && images.length > 0 ? (
           <>
-            {/* Flèche gauche pour naviguer */}
-            <img
-              src={leftArrowImage}
-              alt="Flèche gauche pour naviguer vers l'image précédente"
-              className="arrow left-arrow"
-              onClick={previousImage}
-            />
+            {/* Flèche gauche pour naviguer, visible uniquement si plus d'une image */}
+            {images.length > 1 && (
+              <img
+                src={leftArrowImage}
+                alt="Flèche gauche pour naviguer vers précédente"
+                className="arrow left-arrow"
+                onClick={previousImage}
+              />
+            )}
             {/* Image du diaporama */}
             <img
               src={images[currentImageIndex]}
-              alt={`Image ${currentImageIndex}`}
+              alt={`${currentImageIndex}`}
               className="photo-caroussel"
             />
-            {/* Flèche droite pour naviguer */}
-            <img
-              src={rightArrowImage}
-              alt="Flèche droite pour naviguer vers l'image suivante"
-              className="arrow right-arrow"
-              onClick={nextImage}
-            />
+            {/* Flèche droite pour naviguer, visible uniquement si plus d'une image */}
+            {images.length > 1 && (
+              <img
+                src={rightArrowImage}
+                alt="Flèche droite pour naviguer vers suivante"
+                className="arrow right-arrow"
+                onClick={nextImage}
+              />
+            )}
           </>
         ) : (
           <p>Aucune image disponible.</p>

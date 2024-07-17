@@ -9,12 +9,14 @@
   width: 100%;
   object-fit: cover;
   @include medium-border;
-
+  @media screen and (max-width: 550px){
+    height: 255px;
+  }
 }
 
 .image-container {
   position: relative;
-  width: 1240px;
+  max-width: 1240px;
 }
 
 .left-arrow,
@@ -36,16 +38,22 @@
 }
 
 .card-host {
-  width: 1240px;
+  max-width: 1240px;
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
   @include flex-display($jc: space-between);
+  @media screen and (max-width: 768px) {
+    @include flex-display($di: column); // Passer en colonne sur les petits écrans
+  }
 }
 
 .title {
   font-size: 32px;
   color: $color-primary;
+  @media screen and (max-width: 768px) {
+   font-size: 18px;
+  }
 }
 
 p.hostName {
@@ -66,6 +74,10 @@ p.hostName {
 .infoHote {
   @include flex-display($di: column, $ai: flex-start, $ga: 10px);
   // margin-top: 32px;
+  @media screen and (max-width: 768px) {
+    @include flex-display($di: row-reverse, $ai: center, $jc: space-between, $ga: 10px); // Inverser l'ordre des éléments
+    margin-top: 20px;
+}
 }
 
 .host-info {
@@ -81,6 +93,9 @@ p.hostName {
   background-color: $color-primary;
   color: $color-secondary;
   font-size: 14px;
+  @media screen and (max-width: 768px) {
+    @include small-border;
+  }
 }
 
 .description-equipments {
@@ -88,9 +103,21 @@ p.hostName {
   max-width: 1240px;
   margin: 0 auto;
   gap: 15px;
+  @media screen and (max-width: 768px) {
+    @include flex-display($di: column); // Passer en colonne sur les petits écrans
+  }
 }
 
 .collapseDescription,
 .collapseEquipements {
   width: 100%;
+}
+
+.location,
+.collapse-content p,
+.collapse-content li {
+  color: black;
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+   }
 }

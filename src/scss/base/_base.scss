@@ -4,13 +4,14 @@
   font-family: Montserrat, Helvetica, sans-serif;
   color: $color-primary;
   box-sizing: border-box;
-  margin: 0;
+  // margin: 0;
   padding: 0;
 }
 
 #root {
   min-height: 100vh;
   @include flex-display($di: column, $jc: initial);
+  margin: 0 $main-margin-sm; // Marge pour page complète
 }
 
 .main {

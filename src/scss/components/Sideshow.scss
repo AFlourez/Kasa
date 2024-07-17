@@ -39,3 +39,10 @@
   //   margin: 0 auto;
   // }
   
+  img.arrow.left-arrow,
+  img.arrow.right-arrow{
+    @media screen and (max-width: 550px){
+      height: 24px;
+      width: 24px;
+    }
+  }
