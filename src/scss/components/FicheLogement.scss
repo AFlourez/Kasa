@@ -10,7 +10,7 @@
   object-fit: cover;
   @include medium-border;
   @media screen and (max-width: 550px){
-    height: 255px;
+    height: $carousel-height-sm;
   }
 }
 
@@ -61,8 +61,7 @@ p.hostName {
 }
 
 .hostPicture {
-  width: 64px;
-  height: 64px;
+  @include dimensions(64px, 64px);
   @include large-border;
 }
 

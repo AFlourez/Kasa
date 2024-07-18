@@ -2,8 +2,8 @@
 @import '../utils/mixins';
 
 .about-cover {
-    max-width: 1240px;
-    height: 223px;
+    max-width: $max-width;
+    height: $carousel-height-sm;
     background-image: url('../../assets/about_cover.png');
     background-size: cover;
     background-position: center;
@@ -13,7 +13,7 @@
     @include large-border; 
 
     @media screen and (max-width: 550px) {
-        margin: 20px auto;
+        margin: $main-margin-sm auto;
         height: 120px;
         @include small-border
     }
