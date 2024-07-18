@@ -9,7 +9,7 @@ function Gallery() {
   return (
     <div className="gallery"> 
       {locations.map(location => (
-        <Link to={`/FicheLogement/${location.id}`} key={location.id} className="gallery-item-link">
+        <Link to={`/Caroussel/${location.id}`} key={location.id} className="gallery-item-link">
           <div className="gallery-item">
             <img src={location.cover} alt={location.title} className="gallery-image" />
             <div className="gallery-text-container">

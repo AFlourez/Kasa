@@ -16,7 +16,7 @@
 
 .image-container {
   position: relative;
-  max-width: 1240px;
+  max-width: $max-width;
 }
 
 .left-arrow,
@@ -38,7 +38,7 @@
 }
 
 .card-host {
-  max-width: 1240px;
+  max-width: $max-width;
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -99,9 +99,9 @@ p.hostName {
 
 .description-equipments {
   @include flex-display($jc: space-between);
-  max-width: 1240px;
-  margin: 0 auto;
-  gap: 15px;
+  max-width: $max-width;
+  margin: $nomargin-center;
+  gap: $medium-gap;
   @media screen and (max-width: 768px) {
     @include flex-display($di: column); // Passer en colonne sur les petits écrans
   }

@@ -8,10 +8,10 @@
 .error h2 {
   font-size: 288px;
   color: $color-primary;
-  margin: 100px auto;
+  margin: 10$nomargin-center;
   @media screen and (max-width: 700px) {
     font-size: 96px;
-    margin: 50px auto;
+    margin: 5$nomargin-center;
   }
 }
 

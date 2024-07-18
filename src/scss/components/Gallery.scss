@@ -4,7 +4,7 @@
 .gallery {
   @include flex-display($wr: wrap, $jc: center, $ga: 50px);
   max-width: $max-width;
-  margin: 0px auto;
+  margin: $nomargin-center;
   background-color: $color-light-bg;
   @include medium-border;
   padding-top: 50px;
@@ -13,7 +13,7 @@
     padding-top:30px;
     padding-bottom: 30px;
   }
-  @media screen and (max-width: 400px){
+  @media screen and (max-width: 450px){
     background-color: transparent;
   }
 }

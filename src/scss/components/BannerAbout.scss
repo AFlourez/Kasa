@@ -9,7 +9,7 @@
     background-position: center;
     color: white;
     text-align: center;
-    margin: 0 auto; 
+    margin: $nomargin-center; 
     @include large-border; 
 
     @media screen and (max-width: 550px) {

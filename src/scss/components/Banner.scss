@@ -12,7 +12,7 @@
   height: 223px;
 
   @media screen and (max-width: 550px) {
-    margin: 20px auto;
+    margin: 2$nomargin-center;
     height: 120px;
     @include small-border;
     min-width: 335px;
@@ -24,7 +24,7 @@
     background-size: cover;
     background-position: center;
     text-align: center;
-    margin: 0 auto;
+    margin: $nomargin-center;
     @include large-border; // Utilisation de la variable définie dans _variables.scss
     overflow: hidden;
     width: 100%;
