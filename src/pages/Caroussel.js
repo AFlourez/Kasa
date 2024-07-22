@@ -18,15 +18,6 @@ function Caroussel() {
     return <Error404 />;
   }
 
-  // Exemple de classes pour chaque tag basées sur son contenu
-  const getTagClassName = (tag) => {
-    switch (tag.toLowerCase()) {
-      // Ajoutez des cases switch pour chaque classe de tag si nécessaire
-      default:
-        return '';
-    }
-  };
-
   return (
     <div className="caroussel">
       <Header />
@@ -37,8 +28,8 @@ function Caroussel() {
           <p className="location">{location.location}</p>
           {/* Mapping des tags avec les classes spécifiques */}
           <div className="tags">
-            {location.tags.map((tag, index) => (
-              <span key={index} className={`tag ${getTagClassName(tag)}`}>
+            {location.tags.map((tag) => (
+              <span key={tag}>
                 {tag}
               </span>
             ))}
