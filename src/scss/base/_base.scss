@@ -8,23 +8,19 @@
   padding: 0px;
 }
 
-body{
-  width: 100%;
-  margin: 0px;
+html, body, #root{
+  height: 100%;
+  margin: 0;
+}
+
+.App {
+  min-height: 100vh;
 }
 
 #root {
   min-height: 100vh;
   @include flex-display($di: column, $jc: initial);
-  margin: 0 $main-margin-sm; // Marge pour page complète
-}
-
-.main {
   margin: 0 $main-margin-sm;
-  flex-grow: 1;
-  @include desktop-breakpoint {
-    margin: 0 $main-margin;
-  }
 }
 
 .link {

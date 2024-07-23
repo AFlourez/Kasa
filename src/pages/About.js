@@ -23,8 +23,8 @@ const About = () => {  return (
         <Collapse title="Sécurité">
           <p>La sécurité est la priorité de Kasa...</p>
         </Collapse>
-        <Footer />
-      </div>
+        </div>
+      <Footer />
     </div>
   );
 };

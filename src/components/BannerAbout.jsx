@@ -5,7 +5,6 @@ import '../scss/components/BannerAbout.scss';
 function BannerAbout() {
   return (
     <div className="about-cover">
-
     </div>
   );
 }

@@ -10,10 +10,11 @@ import '../scss/components/Caroussel.scss';
 import Error404 from '../components/Error404';
 
 function Caroussel() {
+  // useParams extrait l'ID de l'URL
   let { id: locationId } = useParams();
-
+  // Cherche la localisation correspondante dans les données "locations"
   let location = locations.find(loc => loc.id === locationId);
-
+  // Affiche la page d'erreur si pas trouvé
   if (!location) {
     return <Error404 />;
   }
@@ -26,7 +27,7 @@ function Caroussel() {
         <div className="infoLieu">
           <p className="title">{location.title}</p>
           <p className="location">{location.location}</p>
-          {/* Mapping des tags avec les classes spécifiques */}
+          {/* Mapping des tags */}
           <div className="tags">
             {location.tags.map((tag) => (
               <span key={tag}>

@@ -12,9 +12,8 @@
   height: 223px;
 
   @media screen and (max-width: 550px) {
-    margin: 2$nomargin-center;
+    margin: $nomargin-center;
     height: 120px;
-    @include small-border;
     min-width: 335px;
   }
 
@@ -28,6 +27,12 @@
     @include large-border; // Utilisation de la variable définie dans _variables.scss
     overflow: hidden;
     width: 100%;
+      @media screen and (max-width: 550px) {
+        margin: $main-margin-sm;
+        height: 120px;
+        @include medium-border;
+        min-width: 335px;
+      }
 
     &::before {
       content: '';

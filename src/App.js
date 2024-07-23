@@ -18,7 +18,9 @@ function App() {
           <Route path="/Caroussel/:id" element={<Caroussel />} />
           {/* Route pour la page d'accueil */}
           <Route exact path="/" element={<Home />} />
+          {/* Route pour la page a propos */}
           <Route path="/about" element={<About />} />
+          {/* Routes inexistante -> Erreur */}
           <Route path="*" element={<Error404 />} /> {/* Route pour l'erreur 404 */}
         </Routes>
       </div>

@@ -2,9 +2,13 @@ import React, { useState } from 'react';
 import '../scss/components/Collapse.scss';
 import arrowDown from '../assets/arrow_down.png';
 
+// isOpen est initialisé à false, donc l'élément est fermé par défaut
+// isOpen détermine l'état ouvert ou fermé
+// setIsOpen met à jour la fonction isOpen
 const Collapse = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+// Inverse la valeur de isOpen chaque fois qu'elle est appelée //
   const toggleCollapse = () => {
     setIsOpen(!isOpen);
   };
@@ -19,6 +23,7 @@ const Collapse = ({ title, children }) => {
           className={`arrow ${isOpen ? 'open' : ''}`} 
         />
       </div>
+       {/* Si isOpen est true, affiche le contenu enfant (children) */}
       {isOpen && <div className="collapse-content">{children}</div>}
     </div>
   );

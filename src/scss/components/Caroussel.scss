@@ -40,8 +40,8 @@
 .card-host {
   max-width: $max-width;
   margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   @include flex-display($jc: space-between);
   @media screen and (max-width: 768px) {
     @include flex-display($di: column); // Passer en colonne sur les petits écrans
@@ -50,6 +50,7 @@
 
 .title {
   font-size: 32px;
+  margin-top: 0px;
   color: $color-primary;
   @media screen and (max-width: 768px) {
    font-size: 18px;
@@ -83,7 +84,7 @@ p.hostName {
   @include flex-display($ai: center, $jc: center);
 }
 
-.tag {
+.tags span {
   display: inline-block;
   padding: 5px 10px;
   margin-right: 5px;
@@ -103,7 +104,7 @@ p.hostName {
   margin: $nomargin-center;
   gap: $medium-gap;
   @media screen and (max-width: 768px) {
-    @include flex-display($di: column); // Passer en colonne sur les petits écrans
+    @include flex-display($di: column); // Passe en colonne sur les petits écrans
   }
 }
 
