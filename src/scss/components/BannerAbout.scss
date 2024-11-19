@@ -1,0 +1,26 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.about-cover {
+    max-width: $max-width;
+    height: $carousel-height-sm;
+    background-image: url('../../assets/about_cover.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    margin: $nomargin-center; 
+    @include large-border; 
+
+    @media screen and (max-width: 550px) {
+        margin: $main-margin-sm auto;
+        height: 120px;
+        @include small-border
+    }
+
+}
+
+.collapses {
+    margin-top: 40px;
+  }
+  

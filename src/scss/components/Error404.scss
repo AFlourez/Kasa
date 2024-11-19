@@ -1,0 +1,33 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.error {
+  text-align: center;
+}
+
+.error h2 {
+  font-size: 288px;
+  color: $color-primary;
+  margin: $nomargin-center;
+  @media screen and (max-width: 700px) {
+    font-size: 96px;
+    margin: 5$nomargin-center;
+  }
+}
+
+.textError {
+  color: $color-primary;
+  @include font($fs: 36px);
+  @media screen and (max-width: 700px) {
+    font-size: 18px;
+  }
+}
+
+.linkTextError {
+  @include font($fs: 16px);
+  margin: 50px;
+}
+
+.linkTextError a{
+  color: black;
+}

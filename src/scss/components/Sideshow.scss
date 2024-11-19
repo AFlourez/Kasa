@@ -1,8 +1,10 @@
-/* Slideshow.css */
+@import '../utils/mixins';
+@import '../utils/variables';
+
 
 .slideshow {
-    max-width: 1240px;
-    margin: 0 auto;
+    max-width: $max-width;
+    margin: $nomargin-center;
 
   }
   
@@ -31,9 +33,16 @@
     right: 10px;
   }
   
-  .gallery-image {
-    width: 100%;
-    max-height: 400px;
-    margin: 0 auto;
-  }
+  // .gallery-image {
+  //   width: 100%;
+  //   max-height: 400px;
+  //   margin: $nomargin-center;
+  // }
   
+  img.arrow.left-arrow,
+  img.arrow.right-arrow{
+    @media screen and (max-width: 550px){
+      height: 24px;
+      width: 24px;
+    }
+  }

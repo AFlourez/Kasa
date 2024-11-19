@@ -1,0 +1,38 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.collapse {
+  @include small-border;
+  overflow: hidden;
+  width: 100%; 
+  margin: $nomargin-center;
+  margin-bottom: 20px;
+  max-width: 1100px;
+}
+
+.collapse-title {
+  @include flex-display($jc: space-between, $ai: center);
+  padding: 10px;
+  background-color: $color-primary;
+  cursor: pointer;
+}
+
+.collapse-title h3 {
+  margin: 0;
+  color: $color-secondary;
+}
+
+.collapse-title .arrow {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.collapse-title .arrow.open {
+  transform: rotate(180deg); 
+}
+
+.collapse-content {
+  padding: 20px;
+  background-color: $color-light-bg;
+}

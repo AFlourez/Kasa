@@ -4,21 +4,23 @@
   font-family: Montserrat, Helvetica, sans-serif;
   color: $color-primary;
   box-sizing: border-box;
+  // margin: 0;
+  padding: 0px;
+}
+
+html, body, #root{
+  height: 100%;
   margin: 0;
-  padding: 0;
+}
+
+.App {
+  min-height: 100vh;
 }
 
 #root {
   min-height: 100vh;
   @include flex-display($di: column, $jc: initial);
-}
-
-.main {
   margin: 0 $main-margin-sm;
-  flex-grow: 1;
-  @include desktop-breakpoint {
-    margin: 0 $main-margin;
-  }
 }
 
 .link {

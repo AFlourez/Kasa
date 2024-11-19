@@ -5,23 +5,34 @@
 @import '../utils/variables';
 
 .banner {
-  width: 100%;
-  margin: 0 auto;
+  // width: 100%;
+  margin: $nomargin-center;
   @include flex-display($jc: center, $ai: center); // Utilisation du mixin flex-display pour centrer horizontalement et verticalement
-  max-width: 1240px; // Assurez-vous que cette règle est correctement appliquée dans votre structure CSS
+  max-width: $max-width; // Assurez-vous que cette règle est correctement appliquée
+  height: 223px;
+
+  @media screen and (max-width: 550px) {
+    margin: $nomargin-center;
+    height: 120px;
+    min-width: 335px;
+  }
 
   .home-cover {
-    @extend .banner; // Utilisation de l'extension pour réutiliser les styles de .banner
     position: relative;
     background-image: url('../../assets/home_cover.png'); // Utilisation de Sass pour l'URL
     background-size: cover;
     background-position: center;
-    color: white;
     text-align: center;
-    margin: 0 auto;
-    border-radius: $large-border-radius; // Utilisation de la variable définie dans _variables.scss
+    margin: $nomargin-center;
+    @include large-border; // Utilisation de la variable définie dans _variables.scss
     overflow: hidden;
     width: 100%;
+      @media screen and (max-width: 550px) {
+        margin: $main-margin-sm;
+        height: 120px;
+        @include medium-border;
+        min-width: 335px;
+      }
 
     &::before {
       content: '';
@@ -35,38 +46,15 @@
 
     .home-cover-text {
       position: relative;
-      font-size: 3rem;
+      font-size: 48px;
       font-weight: normal;
-    }
-  }
+      color: white;
+      padding: 20px;
 
-  .about-cover {
-    @extend .banner; // Utilisation de l'extension pour réutiliser les styles de .banner
-    position: relative;
-    background-image: url('../../assets/about_cover.png'); // Utilisation de Sass pour l'URL
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    margin: 0 auto;
-    border-radius: $large-border-radius; // Utilisation de la variable définie dans _variables.scss
-    overflow: hidden;
-    width: 100%;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.45); // Utilisation de Sass pour la couleur avec opacité
-    }
-
-    .about-cover-text {
-      position: relative;
-      font-size: 3rem;
-      font-weight: normal;
+      @media screen and (max-width: 550px) {
+        font-size: 24px;
+        text-align: start;
+      }
     }
   }
 }

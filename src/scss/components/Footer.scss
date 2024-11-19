@@ -1,0 +1,35 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.footer {
+  background-color: black;
+  color: $color-secondary;
+  text-align: center;
+  padding: 20px;
+  height: $footer-height;
+  margin-top: 40px;
+  @include flex-display($di: column, $jc: center, $ai: center);
+  margin-right: -20px;
+  margin-left: -20px;
+  @media screen and (max-width: 450px){
+    height: $footer-height-sm;
+  }
+  
+}
+
+.footer-logo {
+  height: auto;
+  margin-bottom: 10px; // Espace en bas du logo
+  @media screen and (max-width: 450px){
+    height: 28px;
+  }
+}
+
+.footer-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: $color-secondary;
+  @media screen and (max-width: 450px){
+    @include font($fs: 10px);
+  }
+}

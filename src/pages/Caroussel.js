@@ -6,39 +6,31 @@ import locations from '../data/data.js';
 import Slideshow from '../components/Slideshow';
 import renderStars from '../components/renderStars';
 import Collapse from '../components/Collapse';
-import '../scss/FicheLogement.css';
+import '../scss/components/Caroussel.scss';
 import Error404 from '../components/Error404';
 
-function FicheLogement() {
+function Caroussel() {
+  // useParams extrait l'ID de l'URL
   let { id: locationId } = useParams();
-
+  // Cherche la localisation correspondante dans les données "locations"
   let location = locations.find(loc => loc.id === locationId);
-
+  // Affiche la page d'erreur si pas trouvé
   if (!location) {
     return <Error404 />;
   }
 
-  // Exemple de classes pour chaque tag basées sur son contenu
-  const getTagClassName = (tag) => {
-    switch (tag.toLowerCase()) {
-      // Ajoutez des cases switch pour chaque classe de tag si nécessaire
-      default:
-        return '';
-    }
-  };
-
   return (
-    <div className="fiche-logement">
+    <div className="caroussel">
       <Header />
       <Slideshow images={location.pictures} />
       <div className="card-host">
         <div className="infoLieu">
           <p className="title">{location.title}</p>
           <p className="location">{location.location}</p>
-          {/* Mapping des tags avec les classes spécifiques */}
+          {/* Mapping des tags */}
           <div className="tags">
-            {location.tags.map((tag, index) => (
-              <span key={index} className={`tag ${getTagClassName(tag)}`}>
+            {location.tags.map((tag) => (
+              <span key={tag}>
                 {tag}
               </span>
             ))}
@@ -78,4 +70,4 @@ function FicheLogement() {
   );
 }
 
-export default FicheLogement;
+export default Caroussel;

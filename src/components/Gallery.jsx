@@ -1,15 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import locations from '../data/data.js';
-import '../scss/Gallery.css';
+import '../scss/components/Gallery.scss';
 
 
 
 function Gallery() {
   return (
     <div className="gallery"> 
+      {/* Itére sur chaque élément du tableau "locations" afin de retourner un composant 'Link' pour chaque "location" */}
       {locations.map(location => (
-        <Link to={`/FicheLogement/${location.id}`} key={location.id} className="gallery-item-link">
+        <Link to={`/Caroussel/${location.id}`} key={location.id} className="gallery-item-link">
           <div className="gallery-item">
             <img src={location.cover} alt={location.title} className="gallery-image" />
             <div className="gallery-text-container">

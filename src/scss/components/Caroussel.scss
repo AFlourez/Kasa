@@ -1,0 +1,123 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.photo-caroussel {
+  position: relative;
+  margin: auto;
+  @include flex-display($jc: center);
+  height: $carousel-height;
+  width: 100%;
+  object-fit: cover;
+  @include medium-border;
+  @media screen and (max-width: 550px){
+    height: $carousel-height-sm;
+  }
+}
+
+.image-container {
+  position: relative;
+  max-width: $max-width;
+}
+
+.left-arrow,
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  height: $carousel-arrow-height; 
+  width: $carousel-arrow-width;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.card-host {
+  max-width: $max-width;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  @include flex-display($jc: space-between);
+  @media screen and (max-width: 768px) {
+    @include flex-display($di: column); // Passer en colonne sur les petits écrans
+  }
+}
+
+.title {
+  font-size: 32px;
+  margin-top: 0px;
+  color: $color-primary;
+  @media screen and (max-width: 768px) {
+   font-size: 18px;
+  }
+}
+
+p.hostName {
+  color: $color-primary;
+}
+
+.hostPicture {
+  @include dimensions(64px, 64px);
+  @include large-border;
+}
+
+.hostName {
+  color: $color-primary;
+  margin-right: 10px; 
+}
+
+.infoHote {
+  @include flex-display($di: column, $ai: flex-start, $ga: 10px);
+  // margin-top: 32px;
+  @media screen and (max-width: 768px) {
+    @include flex-display($di: row-reverse, $ai: center, $jc: space-between, $ga: 10px); // Inverser l'ordre des éléments
+    margin-top: 20px;
+}
+}
+
+.host-info {
+  @include flex-display($ai: center, $jc: center);
+}
+
+.tags span {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 5px;
+  margin-top: 20px;
+  @include large-border;
+  background-color: $color-primary;
+  color: $color-secondary;
+  font-size: 14px;
+  @media screen and (max-width: 768px) {
+    @include small-border;
+  }
+}
+
+.description-equipments {
+  @include flex-display($jc: space-between);
+  max-width: $max-width;
+  margin: $nomargin-center;
+  gap: $medium-gap;
+  @media screen and (max-width: 768px) {
+    @include flex-display($di: column); // Passe en colonne sur les petits écrans
+  }
+}
+
+.collapseDescription,
+.collapseEquipements {
+  width: 100%;
+}
+
+.location,
+.collapse-content p,
+.collapse-content li {
+  color: black;
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+   }
+}

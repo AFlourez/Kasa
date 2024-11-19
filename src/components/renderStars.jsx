@@ -1,7 +1,7 @@
 import React from 'react';
 import starActive from '../assets/star-active.png';
 import starInactive from '../assets/star-inactive.png';
-import '../scss/renderStars.css';
+import '../scss/components/renderStars.scss';
 
 const renderStars = (rating) => {
   const totalStars = 5;

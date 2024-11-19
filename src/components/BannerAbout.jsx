@@ -1,12 +1,10 @@
 
 import React from 'react';
-import '../scss/BannerAbout.css';
+import '../scss/components/BannerAbout.scss';
 
 function BannerAbout() {
   return (
-    <div className="about-cover-container bannerAbout">
-      <div className="about-cover">
-      </div>
+    <div className="about-cover">
     </div>
   );
 }
