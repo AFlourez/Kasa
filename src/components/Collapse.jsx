@@ -3,7 +3,7 @@ import '../scss/components/Collapse.scss';
 import arrowDown from '../assets/arrow_down.png';
 
 // isOpen est initialisé à false, donc l'élément est fermé par défaut
-// isOpen détermine l'état ouvert ou fermé
+// isOpen détermine l'état ouvert ou fermé (true / false)
 // setIsOpen met à jour la fonction isOpen
 const Collapse = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
